@@ -1,0 +1,45 @@
+{
+  "resourceType": "Observation",
+  "id": "9c78f7d5-f6d1-8a33-cab7-903ecd6b70d6",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab"
+    ]
+  },
+  "status": "final",
+  "category": [
+    {
+      "coding": [
+        {
+          "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+          "code": "laboratory",
+          "display": "Laboratory"
+        }
+      ]
+    }
+  ],
+  "code": {
+    "coding": [
+      {
+        "system": "http://loinc.org",
+        "code": "49765-1",
+        "display": "Calcium [Mass/volume] in Blood"
+      }
+    ],
+    "text": "Calcium [Mass/volume] in Blood"
+  },
+  "subject": {
+    "reference": "Patient/8ca556e1-df66-6783-7478-8d5b330ab431"
+  },
+  "encounter": {
+    "reference": "Encounter/a667cded-b4ab-e8db-faeb-90af5fe7446c"
+  },
+  "effectiveDateTime": "2022-03-30T13:49:57-05:00",
+  "issued": "2022-03-30T13:49:57.246-05:00",
+  "valueQuantity": {
+    "value": 9.48,
+    "unit": "mg/dL",
+    "system": "http://unitsofmeasure.org",
+    "code": "mg/dL"
+  }
+}

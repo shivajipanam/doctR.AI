@@ -1,0 +1,45 @@
+{
+  "resourceType": "Observation",
+  "id": "12bf6a1d-5ec3-58c7-5fdc-cf596983dd3d",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab"
+    ]
+  },
+  "status": "final",
+  "category": [
+    {
+      "coding": [
+        {
+          "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+          "code": "laboratory",
+          "display": "Laboratory"
+        }
+      ]
+    }
+  ],
+  "code": {
+    "coding": [
+      {
+        "system": "http://loinc.org",
+        "code": "6298-4",
+        "display": "Potassium [Moles/volume] in Blood"
+      }
+    ],
+    "text": "Potassium [Moles/volume] in Blood"
+  },
+  "subject": {
+    "reference": "Patient/8ca556e1-df66-6783-7478-8d5b330ab431"
+  },
+  "encounter": {
+    "reference": "Encounter/8b437475-f659-b4be-f658-1a079ed09381"
+  },
+  "effectiveDateTime": "2022-05-18T13:49:57-05:00",
+  "issued": "2022-05-18T13:49:57.246-05:00",
+  "valueQuantity": {
+    "value": 4.51,
+    "unit": "mmol/L",
+    "system": "http://unitsofmeasure.org",
+    "code": "mmol/L"
+  }
+}

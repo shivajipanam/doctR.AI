@@ -1,0 +1,45 @@
+{
+  "resourceType": "Observation",
+  "id": "a7972e6d-68d1-de0d-c633-f7fbe1d0178b",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab"
+    ]
+  },
+  "status": "final",
+  "category": [
+    {
+      "coding": [
+        {
+          "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+          "code": "laboratory",
+          "display": "Laboratory"
+        }
+      ]
+    }
+  ],
+  "code": {
+    "coding": [
+      {
+        "system": "http://loinc.org",
+        "code": "2028-9",
+        "display": "Carbon dioxide, total [Moles/volume] in Serum or Plasma"
+      }
+    ],
+    "text": "Carbon dioxide, total [Moles/volume] in Serum or Plasma"
+  },
+  "subject": {
+    "reference": "Patient/8ca556e1-df66-6783-7478-8d5b330ab431"
+  },
+  "encounter": {
+    "reference": "Encounter/8d2e17c7-b98a-9da8-182e-b0eb676a2ca4"
+  },
+  "effectiveDateTime": "2024-11-13T12:49:57-06:00",
+  "issued": "2024-11-13T12:49:57.246-06:00",
+  "valueQuantity": {
+    "value": 23.37,
+    "unit": "mmol/L",
+    "system": "http://unitsofmeasure.org",
+    "code": "mmol/L"
+  }
+}

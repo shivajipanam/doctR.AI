@@ -1,0 +1,49 @@
+{
+  "resourceType": "Observation",
+  "id": "57772116-f900-49ff-60e6-80e620337bd7",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab"
+    ]
+  },
+  "status": "final",
+  "category": [
+    {
+      "coding": [
+        {
+          "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+          "code": "laboratory",
+          "display": "Laboratory"
+        }
+      ]
+    }
+  ],
+  "code": {
+    "coding": [
+      {
+        "system": "http://loinc.org",
+        "code": "25428-4",
+        "display": "Glucose [Presence] in Urine by Test strip"
+      }
+    ],
+    "text": "Glucose [Presence] in Urine by Test strip"
+  },
+  "subject": {
+    "reference": "Patient/8ca556e1-df66-6783-7478-8d5b330ab431"
+  },
+  "encounter": {
+    "reference": "Encounter/bc99f8ee-a38f-c1f6-398d-884954284d63"
+  },
+  "effectiveDateTime": "2022-01-26T12:49:57-06:00",
+  "issued": "2022-01-26T12:49:57.246-06:00",
+  "valueCodeableConcept": {
+    "coding": [
+      {
+        "system": "http://snomed.info/sct",
+        "code": "167265006",
+        "display": "Urine glucose test = ++ (finding)"
+      }
+    ],
+    "text": "Urine glucose test = ++ (finding)"
+  }
+}

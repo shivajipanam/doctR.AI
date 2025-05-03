@@ -1,0 +1,77 @@
+{
+  "resourceType": "Observation",
+  "id": "f4b0ea09-0e7b-dba1-c7b4-bafe6a51d96c",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/us/core/StructureDefinition/us-core-blood-pressure"
+    ]
+  },
+  "status": "final",
+  "category": [
+    {
+      "coding": [
+        {
+          "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+          "code": "vital-signs",
+          "display": "Vital signs"
+        }
+      ]
+    }
+  ],
+  "code": {
+    "coding": [
+      {
+        "system": "http://loinc.org",
+        "code": "85354-9",
+        "display": "Blood pressure panel with all children optional"
+      }
+    ],
+    "text": "Blood pressure panel with all children optional"
+  },
+  "subject": {
+    "reference": "Patient/475b3dd9-b7c3-9623-2c28-d354ec1a4ef2"
+  },
+  "encounter": {
+    "reference": "Encounter/0387e45e-86e9-0aa2-6d57-bf7f99cfe9df"
+  },
+  "effectiveDateTime": "2017-02-22T21:17:03-06:00",
+  "issued": "2017-02-22T21:17:03.402-06:00",
+  "component": [
+    {
+      "code": {
+        "coding": [
+          {
+            "system": "http://loinc.org",
+            "code": "8462-4",
+            "display": "Diastolic Blood Pressure"
+          }
+        ],
+        "text": "Diastolic Blood Pressure"
+      },
+      "valueQuantity": {
+        "value": 76,
+        "unit": "mm[Hg]",
+        "system": "http://unitsofmeasure.org",
+        "code": "mm[Hg]"
+      }
+    },
+    {
+      "code": {
+        "coding": [
+          {
+            "system": "http://loinc.org",
+            "code": "8480-6",
+            "display": "Systolic Blood Pressure"
+          }
+        ],
+        "text": "Systolic Blood Pressure"
+      },
+      "valueQuantity": {
+        "value": 138,
+        "unit": "mm[Hg]",
+        "system": "http://unitsofmeasure.org",
+        "code": "mm[Hg]"
+      }
+    }
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "resourceType": "Observation",
+  "id": "f7cb0bb4-de6f-eb75-4c46-de0a8f53bbb9",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab"
+    ]
+  },
+  "status": "final",
+  "category": [
+    {
+      "coding": [
+        {
+          "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+          "code": "laboratory",
+          "display": "Laboratory"
+        }
+      ]
+    }
+  ],
+  "code": {
+    "coding": [
+      {
+        "system": "http://loinc.org",
+        "code": "5778-6",
+        "display": "Color of Urine"
+      }
+    ],
+    "text": "Color of Urine"
+  },
+  "subject": {
+    "reference": "Patient/03b35ab5-3cf8-d851-6149-7cfbeacfc15a"
+  },
+  "encounter": {
+    "reference": "Encounter/3c87fdbe-12b0-35e8-8e6a-698d61fa3a92"
+  },
+  "effectiveDateTime": "2019-03-19T01:10:31-05:00",
+  "issued": "2019-03-19T01:10:31.546-05:00",
+  "valueCodeableConcept": {
+    "coding": [
+      {
+        "system": "http://snomed.info/sct",
+        "code": "371254008",
+        "display": "Brown color (qualifier value)"
+      }
+    ],
+    "text": "Brown color (qualifier value)"
+  }
+}

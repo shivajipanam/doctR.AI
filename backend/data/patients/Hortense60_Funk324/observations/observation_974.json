@@ -1,0 +1,45 @@
+{
+  "resourceType": "Observation",
+  "id": "3342e6a8-4735-7e40-5900-5eff024af464",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab"
+    ]
+  },
+  "status": "final",
+  "category": [
+    {
+      "coding": [
+        {
+          "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+          "code": "laboratory",
+          "display": "Laboratory"
+        }
+      ]
+    }
+  ],
+  "code": {
+    "coding": [
+      {
+        "system": "http://loinc.org",
+        "code": "5804-0",
+        "display": "Protein [Mass/volume] in Urine by Test strip"
+      }
+    ],
+    "text": "Protein [Mass/volume] in Urine by Test strip"
+  },
+  "subject": {
+    "reference": "Patient/8ca556e1-df66-6783-7478-8d5b330ab431"
+  },
+  "encounter": {
+    "reference": "Encounter/a667cded-b4ab-e8db-faeb-90af5fe7446c"
+  },
+  "effectiveDateTime": "2022-03-30T13:49:57-05:00",
+  "issued": "2022-03-30T13:49:57.246-05:00",
+  "valueQuantity": {
+    "value": 389.87,
+    "unit": "mg/dL",
+    "system": "http://unitsofmeasure.org",
+    "code": "mg/dL"
+  }
+}

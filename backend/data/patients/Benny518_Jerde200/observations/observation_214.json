@@ -1,0 +1,45 @@
+{
+  "resourceType": "Observation",
+  "id": "917fc15a-5d85-51f9-6e2c-5877a0bbe6e3",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-survey"
+    ]
+  },
+  "status": "final",
+  "category": [
+    {
+      "coding": [
+        {
+          "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+          "code": "survey",
+          "display": "Survey"
+        }
+      ]
+    }
+  ],
+  "code": {
+    "coding": [
+      {
+        "system": "http://loinc.org",
+        "code": "46240-8",
+        "display": "History of Hospitalizations+Outpatient visits Narrative"
+      }
+    ],
+    "text": "History of Hospitalizations+Outpatient visits Narrative"
+  },
+  "subject": {
+    "reference": "Patient/f9b0ca33-9693-d19a-1e72-4cc430b2e6d1"
+  },
+  "encounter": {
+    "reference": "Encounter/391fc44a-78ae-58b8-155a-b40e2104c96e"
+  },
+  "effectiveDateTime": "2023-07-13T08:55:34-05:00",
+  "issued": "2023-07-13T08:55:34.684-05:00",
+  "valueQuantity": {
+    "value": 9.9921,
+    "unit": "{count}",
+    "system": "http://unitsofmeasure.org",
+    "code": "{count}"
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "resourceType": "Observation",
+  "id": "68d0db5a-0f72-a3d0-155f-c805dc72919a",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/us/core/StructureDefinition/us-core-body-weight"
+    ]
+  },
+  "status": "final",
+  "category": [
+    {
+      "coding": [
+        {
+          "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+          "code": "vital-signs",
+          "display": "Vital signs"
+        }
+      ]
+    }
+  ],
+  "code": {
+    "coding": [
+      {
+        "system": "http://loinc.org",
+        "code": "29463-7",
+        "display": "Body Weight"
+      }
+    ],
+    "text": "Body Weight"
+  },
+  "subject": {
+    "reference": "Patient/1619ec46-0ac7-e5b0-2287-637f54b17743"
+  },
+  "encounter": {
+    "reference": "Encounter/82a1302d-de84-bf41-f228-6975bdad3191"
+  },
+  "effectiveDateTime": "2015-05-29T09:02:23-05:00",
+  "issued": "2015-05-29T09:02:23.302-05:00",
+  "valueQuantity": {
+    "value": 37.7,
+    "unit": "kg",
+    "system": "http://unitsofmeasure.org",
+    "code": "kg"
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "resourceType": "Observation",
+  "id": "04f43c40-78f4-a391-8165-4539387574b4",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-survey"
+    ]
+  },
+  "status": "final",
+  "category": [
+    {
+      "coding": [
+        {
+          "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+          "code": "survey",
+          "display": "Survey"
+        }
+      ]
+    }
+  ],
+  "code": {
+    "coding": [
+      {
+        "system": "http://loinc.org",
+        "code": "89204-2",
+        "display": "Patient Health Questionnaire-9: Modified for Teens total score [Reported.PHQ.Teen]"
+      }
+    ],
+    "text": "Patient Health Questionnaire-9: Modified for Teens total score [Reported.PHQ.Teen]"
+  },
+  "subject": {
+    "reference": "Patient/1619ec46-0ac7-e5b0-2287-637f54b17743"
+  },
+  "encounter": {
+    "reference": "Encounter/1276ef21-c422-50af-26c9-d42b6c963d58"
+  },
+  "effectiveDateTime": "2020-06-26T09:37:04-05:00",
+  "issued": "2020-06-26T09:37:04.302-05:00",
+  "valueQuantity": {
+    "value": 0,
+    "unit": "{score}",
+    "system": "http://unitsofmeasure.org",
+    "code": "{score}"
+  }
+}

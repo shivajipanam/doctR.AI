@@ -1,0 +1,45 @@
+{
+  "resourceType": "Observation",
+  "id": "b4a3f906-fb50-fa66-f935-d8a90594c879",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/us/core/StructureDefinition/us-core-heart-rate"
+    ]
+  },
+  "status": "final",
+  "category": [
+    {
+      "coding": [
+        {
+          "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+          "code": "vital-signs",
+          "display": "Vital signs"
+        }
+      ]
+    }
+  ],
+  "code": {
+    "coding": [
+      {
+        "system": "http://loinc.org",
+        "code": "8867-4",
+        "display": "Heart rate"
+      }
+    ],
+    "text": "Heart rate"
+  },
+  "subject": {
+    "reference": "Patient/8ca556e1-df66-6783-7478-8d5b330ab431"
+  },
+  "encounter": {
+    "reference": "Encounter/b76b27f7-1d32-3291-ef94-e2c32ef1096e"
+  },
+  "effectiveDateTime": "2024-05-22T13:49:57-05:00",
+  "issued": "2024-05-22T13:49:57.246-05:00",
+  "valueQuantity": {
+    "value": 92,
+    "unit": "/min",
+    "system": "http://unitsofmeasure.org",
+    "code": "/min"
+  }
+}

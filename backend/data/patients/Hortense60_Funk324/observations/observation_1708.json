@@ -1,0 +1,45 @@
+{
+  "resourceType": "Observation",
+  "id": "32fedf49-d029-1033-ecc9-732544f5a8d2",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab"
+    ]
+  },
+  "status": "final",
+  "category": [
+    {
+      "coding": [
+        {
+          "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+          "code": "laboratory",
+          "display": "Laboratory"
+        }
+      ]
+    }
+  ],
+  "code": {
+    "coding": [
+      {
+        "system": "http://loinc.org",
+        "code": "2160-0",
+        "display": "Creatinine [Mass/volume] in Serum or Plasma"
+      }
+    ],
+    "text": "Creatinine [Mass/volume] in Serum or Plasma"
+  },
+  "subject": {
+    "reference": "Patient/8ca556e1-df66-6783-7478-8d5b330ab431"
+  },
+  "encounter": {
+    "reference": "Encounter/ce7f32a6-7c7a-f9d2-f30f-05a613043618"
+  },
+  "effectiveDateTime": "2023-07-19T13:49:57-05:00",
+  "issued": "2023-07-19T13:49:57.246-05:00",
+  "valueQuantity": {
+    "value": 1.9699,
+    "unit": "mg/dL",
+    "system": "http://unitsofmeasure.org",
+    "code": "mg/dL"
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "resourceType": "Observation",
+  "id": "4b3172fe-350e-004c-fafc-f7927f7c6c64",
+  "status": "final",
+  "category": [
+    {
+      "coding": [
+        {
+          "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+          "code": "laboratory",
+          "display": "Laboratory"
+        }
+      ]
+    }
+  ],
+  "code": {
+    "coding": [
+      {
+        "system": "http://loinc.org",
+        "code": "4548-4",
+        "display": "Hemoglobin A1c/Hemoglobin.total in Blood"
+      }
+    ],
+    "text": "Hemoglobin A1c/Hemoglobin.total in Blood"
+  },
+  "subject": {
+    "reference": "Patient/8ca556e1-df66-6783-7478-8d5b330ab431"
+  },
+  "encounter": {
+    "reference": "Encounter/0b0f45ed-f050-f113-6afc-6b704e6765ef"
+  },
+  "effectiveDateTime": "2022-05-25T13:49:57-05:00",
+  "issued": "2022-05-25T13:49:57.246-05:00",
+  "valueQuantity": {
+    "value": 2.73,
+    "unit": "%",
+    "system": "http://unitsofmeasure.org",
+    "code": "%"
+  }
+}

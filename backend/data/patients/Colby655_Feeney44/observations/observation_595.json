@@ -1,0 +1,45 @@
+{
+  "resourceType": "Observation",
+  "id": "31203c05-0fda-174c-0fc0-b4fcb0435b4c",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab"
+    ]
+  },
+  "status": "final",
+  "category": [
+    {
+      "coding": [
+        {
+          "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+          "code": "laboratory",
+          "display": "Laboratory"
+        }
+      ]
+    }
+  ],
+  "code": {
+    "coding": [
+      {
+        "system": "http://loinc.org",
+        "code": "787-2",
+        "display": "MCV [Entitic volume] by Automated count"
+      }
+    ],
+    "text": "MCV [Entitic volume] by Automated count"
+  },
+  "subject": {
+    "reference": "Patient/a1beff5f-9c21-332c-6c86-a74e070ac72b"
+  },
+  "encounter": {
+    "reference": "Encounter/46b8181f-6bb4-1389-c292-d4eb80b20db3"
+  },
+  "effectiveDateTime": "1991-12-03T13:42:57-06:00",
+  "issued": "1991-12-03T13:42:57.246-06:00",
+  "valueQuantity": {
+    "value": 89.316,
+    "unit": "fL",
+    "system": "http://unitsofmeasure.org",
+    "code": "fL"
+  }
+}

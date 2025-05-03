@@ -1,0 +1,45 @@
+{
+  "resourceType": "Observation",
+  "id": "da4e75d7-5b6b-95cb-c0a9-1f03de37bfda",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab"
+    ]
+  },
+  "status": "final",
+  "category": [
+    {
+      "coding": [
+        {
+          "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+          "code": "laboratory",
+          "display": "Laboratory"
+        }
+      ]
+    }
+  ],
+  "code": {
+    "coding": [
+      {
+        "system": "http://loinc.org",
+        "code": "1742-6",
+        "display": "Alanine aminotransferase [Enzymatic activity/volume] in Serum or Plasma"
+      }
+    ],
+    "text": "Alanine aminotransferase [Enzymatic activity/volume] in Serum or Plasma"
+  },
+  "subject": {
+    "reference": "Patient/a1beff5f-9c21-332c-6c86-a74e070ac72b"
+  },
+  "encounter": {
+    "reference": "Encounter/ebd197de-febe-1e0a-abde-720ac4cc60bd"
+  },
+  "effectiveDateTime": "1992-04-08T13:49:57-05:00",
+  "issued": "1992-04-08T13:49:57.246-05:00",
+  "valueQuantity": {
+    "value": 49.492,
+    "unit": "U/L",
+    "system": "http://unitsofmeasure.org",
+    "code": "U/L"
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "resourceType": "Observation",
+  "id": "8f6df228-552a-e211-72f5-7893049528ba",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/us/core/StructureDefinition/us-core-pulse-oximetry"
+    ]
+  },
+  "status": "final",
+  "category": [
+    {
+      "coding": [
+        {
+          "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+          "code": "vital-signs",
+          "display": "Vital signs"
+        }
+      ]
+    }
+  ],
+  "code": {
+    "coding": [
+      {
+        "system": "http://loinc.org",
+        "code": "2708-6",
+        "display": "Oxygen saturation in Arterial blood"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "59408-5",
+        "display": "Oxygen saturation in Arterial blood by Pulse oximetry"
+      }
+    ],
+    "text": "Oxygen saturation in Arterial blood"
+  },
+  "subject": {
+    "reference": "Patient/03b35ab5-3cf8-d851-6149-7cfbeacfc15a"
+  },
+  "encounter": {
+    "reference": "Encounter/84831674-1891-724c-1ea6-0fc0aae261ee"
+  },
+  "effectiveDateTime": "2020-02-18T07:02:12-06:00",
+  "issued": "2020-02-18T07:02:12.546-06:00",
+  "valueQuantity": {
+    "value": 99.347,
+    "unit": "%",
+    "system": "http://unitsofmeasure.org",
+    "code": "%"
+  }
+}

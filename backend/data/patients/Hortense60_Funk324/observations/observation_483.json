@@ -1,0 +1,45 @@
+{
+  "resourceType": "Observation",
+  "id": "1b31f341-9a78-612f-f993-1b977a1615b9",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab"
+    ]
+  },
+  "status": "final",
+  "category": [
+    {
+      "coding": [
+        {
+          "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+          "code": "laboratory",
+          "display": "Laboratory"
+        }
+      ]
+    }
+  ],
+  "code": {
+    "coding": [
+      {
+        "system": "http://loinc.org",
+        "code": "20505-4",
+        "display": "Bilirubin.total [Mass/volume] in Urine by Test strip"
+      }
+    ],
+    "text": "Bilirubin.total [Mass/volume] in Urine by Test strip"
+  },
+  "subject": {
+    "reference": "Patient/8ca556e1-df66-6783-7478-8d5b330ab431"
+  },
+  "encounter": {
+    "reference": "Encounter/06c78dcf-eb79-bf43-7bb8-02a56e820f8d"
+  },
+  "effectiveDateTime": "2021-06-23T13:49:57-05:00",
+  "issued": "2021-06-23T13:49:57.246-05:00",
+  "valueQuantity": {
+    "value": 1.3529,
+    "unit": "mg/dL",
+    "system": "http://unitsofmeasure.org",
+    "code": "mg/dL"
+  }
+}

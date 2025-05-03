@@ -1,0 +1,45 @@
+{
+  "resourceType": "Observation",
+  "id": "842daa8b-36bc-560f-4b45-0980113e4147",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab"
+    ]
+  },
+  "status": "final",
+  "category": [
+    {
+      "coding": [
+        {
+          "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+          "code": "laboratory",
+          "display": "Laboratory"
+        }
+      ]
+    }
+  ],
+  "code": {
+    "coding": [
+      {
+        "system": "http://loinc.org",
+        "code": "5797-6",
+        "display": "Ketones [Mass/volume] in Urine by Test strip"
+      }
+    ],
+    "text": "Ketones [Mass/volume] in Urine by Test strip"
+  },
+  "subject": {
+    "reference": "Patient/8ca556e1-df66-6783-7478-8d5b330ab431"
+  },
+  "encounter": {
+    "reference": "Encounter/404b2614-7cd4-114a-b5c5-1f04ff1f137b"
+  },
+  "effectiveDateTime": "2024-03-20T13:49:57-05:00",
+  "issued": "2024-03-20T13:49:57.246-05:00",
+  "valueQuantity": {
+    "value": 14.17,
+    "unit": "mg/dL",
+    "system": "http://unitsofmeasure.org",
+    "code": "mg/dL"
+  }
+}

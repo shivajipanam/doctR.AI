@@ -1,0 +1,45 @@
+{
+  "resourceType": "Observation",
+  "id": "b8a2731c-346e-b01a-3272-cd7682a2a5e2",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab"
+    ]
+  },
+  "status": "final",
+  "category": [
+    {
+      "coding": [
+        {
+          "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+          "code": "laboratory",
+          "display": "Laboratory"
+        }
+      ]
+    }
+  ],
+  "code": {
+    "coding": [
+      {
+        "system": "http://loinc.org",
+        "code": "6768-6",
+        "display": "Alkaline phosphatase [Enzymatic activity/volume] in Serum or Plasma"
+      }
+    ],
+    "text": "Alkaline phosphatase [Enzymatic activity/volume] in Serum or Plasma"
+  },
+  "subject": {
+    "reference": "Patient/a1beff5f-9c21-332c-6c86-a74e070ac72b"
+  },
+  "encounter": {
+    "reference": "Encounter/a0be2649-e0da-9eab-c327-909385b75857"
+  },
+  "effectiveDateTime": "1991-08-13T02:37:29-05:00",
+  "issued": "1991-08-13T02:37:29.246-05:00",
+  "valueQuantity": {
+    "value": 70.679,
+    "unit": "U/L",
+    "system": "http://unitsofmeasure.org",
+    "code": "U/L"
+  }
+}

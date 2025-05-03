@@ -1,0 +1,45 @@
+{
+  "resourceType": "Observation",
+  "id": "5f6fba6e-0337-4a14-f707-7ef43f2a545b",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab"
+    ]
+  },
+  "status": "final",
+  "category": [
+    {
+      "coding": [
+        {
+          "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+          "code": "laboratory",
+          "display": "Laboratory"
+        }
+      ]
+    }
+  ],
+  "code": {
+    "coding": [
+      {
+        "system": "http://loinc.org",
+        "code": "2823-3",
+        "display": "Potassium [Moles/volume] in Serum or Plasma"
+      }
+    ],
+    "text": "Potassium [Moles/volume] in Serum or Plasma"
+  },
+  "subject": {
+    "reference": "Patient/03b35ab5-3cf8-d851-6149-7cfbeacfc15a"
+  },
+  "encounter": {
+    "reference": "Encounter/bbc15906-fd04-826b-f490-8b612a862769"
+  },
+  "effectiveDateTime": "2024-04-16T01:10:31-05:00",
+  "issued": "2024-04-16T01:10:31.546-05:00",
+  "valueQuantity": {
+    "value": 4.27,
+    "unit": "mmol/L",
+    "system": "http://unitsofmeasure.org",
+    "code": "mmol/L"
+  }
+}

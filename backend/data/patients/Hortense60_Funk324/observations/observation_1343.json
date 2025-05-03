@@ -1,0 +1,45 @@
+{
+  "resourceType": "Observation",
+  "id": "e2726116-4fe2-eb6e-2476-37ef4eb9eebb",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab"
+    ]
+  },
+  "status": "final",
+  "category": [
+    {
+      "coding": [
+        {
+          "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+          "code": "laboratory",
+          "display": "Laboratory"
+        }
+      ]
+    }
+  ],
+  "code": {
+    "coding": [
+      {
+        "system": "http://loinc.org",
+        "code": "2069-3",
+        "display": "Chloride [Moles/volume] in Blood"
+      }
+    ],
+    "text": "Chloride [Moles/volume] in Blood"
+  },
+  "subject": {
+    "reference": "Patient/8ca556e1-df66-6783-7478-8d5b330ab431"
+  },
+  "encounter": {
+    "reference": "Encounter/af299608-0b43-402f-f2f3-ede4ac7448a8"
+  },
+  "effectiveDateTime": "2023-01-11T12:49:57-06:00",
+  "issued": "2023-01-11T12:49:57.246-06:00",
+  "valueQuantity": {
+    "value": 106.87,
+    "unit": "mmol/L",
+    "system": "http://unitsofmeasure.org",
+    "code": "mmol/L"
+  }
+}

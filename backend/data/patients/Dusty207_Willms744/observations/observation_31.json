@@ -1,0 +1,40 @@
+{
+  "resourceType": "Observation",
+  "id": "ba71ee05-8784-7ba1-8348-f8e9d8aa3f3c",
+  "status": "final",
+  "category": [
+    {
+      "coding": [
+        {
+          "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+          "code": "laboratory",
+          "display": "Laboratory"
+        }
+      ]
+    }
+  ],
+  "code": {
+    "coding": [
+      {
+        "system": "http://loinc.org",
+        "code": "6085-5",
+        "display": "Common Ragweed IgE Ab [Units/volume] in Serum"
+      }
+    ],
+    "text": "Common Ragweed IgE Ab [Units/volume] in Serum"
+  },
+  "subject": {
+    "reference": "Patient/3e04a4c5-c7fd-9618-88a2-4f92a3e95cbf"
+  },
+  "encounter": {
+    "reference": "Encounter/e5ae2023-7d99-1702-c575-bf2cef81ae6e"
+  },
+  "effectiveDateTime": "2016-08-14T17:52:32-05:00",
+  "issued": "2016-08-14T17:52:32.392-05:00",
+  "valueQuantity": {
+    "value": 0.065452,
+    "unit": "kU/L",
+    "system": "http://unitsofmeasure.org",
+    "code": "kU/L"
+  }
+}

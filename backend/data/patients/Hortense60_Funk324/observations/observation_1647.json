@@ -1,0 +1,40 @@
+{
+  "resourceType": "Observation",
+  "id": "9d31d9db-1e04-1dc4-7d20-4b4d66b31380",
+  "status": "final",
+  "category": [
+    {
+      "coding": [
+        {
+          "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+          "code": "laboratory",
+          "display": "Laboratory"
+        }
+      ]
+    }
+  ],
+  "code": {
+    "coding": [
+      {
+        "system": "http://loinc.org",
+        "code": "14959-1",
+        "display": "Microalbumin/Creatinine [Mass Ratio] in Urine"
+      }
+    ],
+    "text": "Microalbumin/Creatinine [Mass Ratio] in Urine"
+  },
+  "subject": {
+    "reference": "Patient/8ca556e1-df66-6783-7478-8d5b330ab431"
+  },
+  "encounter": {
+    "reference": "Encounter/aaa262a5-70f6-f0bc-c78e-6d321af68949"
+  },
+  "effectiveDateTime": "2023-05-24T13:49:57-05:00",
+  "issued": "2023-05-24T13:49:57.246-05:00",
+  "valueQuantity": {
+    "value": 127.72,
+    "unit": "mg/g",
+    "system": "http://unitsofmeasure.org",
+    "code": "mg/g"
+  }
+}

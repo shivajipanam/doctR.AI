@@ -1,0 +1,45 @@
+{
+  "resourceType": "Observation",
+  "id": "c9a24492-9ca0-7a89-efa1-3a82d6036a59",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-survey"
+    ]
+  },
+  "status": "final",
+  "category": [
+    {
+      "coding": [
+        {
+          "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+          "code": "survey",
+          "display": "Survey"
+        }
+      ]
+    }
+  ],
+  "code": {
+    "coding": [
+      {
+        "system": "http://loinc.org",
+        "code": "55758-7",
+        "display": "Patient Health Questionnaire 2 item (PHQ-2) total score [Reported]"
+      }
+    ],
+    "text": "Patient Health Questionnaire 2 item (PHQ-2) total score [Reported]"
+  },
+  "subject": {
+    "reference": "Patient/8ca556e1-df66-6783-7478-8d5b330ab431"
+  },
+  "encounter": {
+    "reference": "Encounter/20afc477-00fa-534e-64e3-2ca7b2f44e65"
+  },
+  "effectiveDateTime": "2020-12-02T15:19:29-06:00",
+  "issued": "2020-12-02T15:19:29.246-06:00",
+  "valueQuantity": {
+    "value": 2,
+    "unit": "{score}",
+    "system": "http://unitsofmeasure.org",
+    "code": "{score}"
+  }
+}

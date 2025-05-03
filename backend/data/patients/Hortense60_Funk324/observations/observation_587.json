@@ -1,0 +1,49 @@
+{
+  "resourceType": "Observation",
+  "id": "c9e462ed-2f57-d47e-0adc-45cff9a14d21",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab"
+    ]
+  },
+  "status": "final",
+  "category": [
+    {
+      "coding": [
+        {
+          "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+          "code": "laboratory",
+          "display": "Laboratory"
+        }
+      ]
+    }
+  ],
+  "code": {
+    "coding": [
+      {
+        "system": "http://loinc.org",
+        "code": "32167-9",
+        "display": "Clarity of Urine"
+      }
+    ],
+    "text": "Clarity of Urine"
+  },
+  "subject": {
+    "reference": "Patient/8ca556e1-df66-6783-7478-8d5b330ab431"
+  },
+  "encounter": {
+    "reference": "Encounter/38016d50-e950-dd8a-8075-6bc8706b7d52"
+  },
+  "effectiveDateTime": "2021-09-29T13:49:57-05:00",
+  "issued": "2021-09-29T13:49:57.246-05:00",
+  "valueCodeableConcept": {
+    "coding": [
+      {
+        "system": "http://snomed.info/sct",
+        "code": "300828005",
+        "display": "Translucent (qualifier value)"
+      }
+    ],
+    "text": "Translucent (qualifier value)"
+  }
+}
