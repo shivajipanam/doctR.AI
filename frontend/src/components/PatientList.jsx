@@ -1,13 +1,25 @@
 import React from 'react';
 
-export default function PatientList() {
+const patients = [
+  { id: 1, name: "Mary R." },
+  { id: 2, name: "John D." },
+  { id: 3, name: "Robert T." }
+];
+
+export default function PatientList({ onSelectPatient }) {
   return (
     <div>
-      <h2 className="font-semibold text-lg mb-2">Patients</h2>
+      <h2 className="font-semibold text-lg mb-4">Patients</h2>
       <ul className="space-y-2">
-        <li className="bg-white p-2 rounded shadow hover:bg-blue-50 cursor-pointer">Mary R.</li>
-        <li className="bg-white p-2 rounded shadow hover:bg-blue-50 cursor-pointer">John D.</li>
-        <li className="bg-white p-2 rounded shadow hover:bg-blue-50 cursor-pointer">Robert T.</li>
+        {patients.map((patient) => (
+          <li
+            key={patient.id}
+            className="bg-white p-3 rounded shadow hover:bg-blue-100 cursor-pointer"
+            onClick={() => onSelectPatient(patient)}
+          >
+            {patient.name}
+          </li>
+        ))}
       </ul>
     </div>
   );
