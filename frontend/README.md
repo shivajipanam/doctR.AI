@@ -1,12 +1,127 @@
-# React + Vite
+# DoctR.AI – Real-Time Clinical Decision Support Dashboard
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+A modern, responsive web application for clinicians to monitor patient vitals in real-time, get AI-driven insights, and manage care with ease. Built using React and Tailwind CSS.
 
-## Expanding the ESLint configuration
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+
+## 🧠 Features
+
+
+
+- 📋 **Patient Panel**: List with search, pagination, and delete option.
+
+- 📈 **Vitals Dashboard**: Real-time charts (line, bar, area, pie) for heart rate, blood pressure, SpO₂, and temperature.
+
+- 🚨 **Alerts Section**: Live alerts triggered by patient data.
+
+- 🤖 **AI Assistant**: Chatbot that answers clinician queries about patient health, labs, insurance, and more.
+
+- 📄 **Questionnaire**: Doctor-patient Q&A form.
+
+- 🎙 **Voice Dictation Panel**: Mock start/stop voice recording functionality.
+
+
+
+## 📦 Tech Stack
+
+
+
+- **Frontend**: React, Tailwind CSS
+
+- **Charts**: Recharts
+
+- **State Management**: React Hooks
+
+- **UI Style**: Responsive dark mode layout
+
+
+
+## 📂 Folder Structure
+
+
+
+frontend/ ├── components/ │ ├── AlertsSection.jsx │ ├── AudioRecorder.jsx │ ├── DoctorAssistantChat.jsx │ ├── Header.jsx │ ├── PatientList.jsx │ ├── PatientQuestionnaire.jsx │ └── VitalsDisplay.jsx ├── App.jsx ├── index.css └── main.jsx
+
+
+
+bash
+
+Copy
+
+Edit
+
+
+
+## 🚀 Getting Started
+
+
+
+1. **Clone the repository**
+
+   ```bash
+
+   git clone https://github.com/yourusername/doctr-ai-dashboard.git
+
+   cd doctr-ai-dashboard
+
+Install dependencies
+
+
+
+bash
+
+Copy
+
+Edit
+
+npm install
+
+Start the development server
+
+
+
+bash
+
+Copy
+
+Edit
+
+npm run dev
+
+Open in browser: http://localhost:5173
+
+
+
+📸 Screenshots
+
+Add your UI screenshot here showing the vitals grid, assistant panel, and alerts section.
+
+
+
+🧪 Future Enhancements
+
+🔌 Backend integration for real patient vitals
+
+
+
+🧠 OpenAI integration for live assistant
+
+
+
+🗃 Patient profile storage with MongoDB
+
+
+
+🎤 Actual audio transcription using Web Speech API
+
+
+
+🤝 Contributors
+
+Your Name
+
+
+
+Built with ❤️ to support real-time healthcare decision-making.
