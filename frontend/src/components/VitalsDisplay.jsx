@@ -38,13 +38,12 @@ export default function VitalsDisplay({ patient }) {
 
   if (!patient) {
     return (
-      <div className="bg-white rounded-lg shadow p-4 text-gray-500">
+      <div className="bg-gray-800 border border-gray-700 rounded-lg p-4 text-gray-400">
         Select a patient to view real-time vitals.
       </div>
     );
   }
 
-  // Determine pie chart category
   const getTempCategory = (temp) => {
     if (temp > 99.5) return "Fever";
     if (temp < 97.0) return "Hypothermia";
@@ -61,75 +60,95 @@ export default function VitalsDisplay({ patient }) {
   const COLORS = ["#10b981", "#f87171", "#60a5fa"];
 
   return (
-    <div className="bg-white rounded-lg shadow p-4 space-y-8">
-      <h2 className="text-lg font-semibold">Vitals for {patient.name}</h2>
+    <div className="bg-gray-800 border border-gray-700 rounded-lg p-4">
+      <h2 className="text-lg font-semibold mb-4 text-white">
+        Vitals for <span className="text-blue-400">{patient.name}</span>
+      </h2>
 
-      {/* Heart Rate - Line */}
-      <div className="h-56">
-        <h3 className="font-medium mb-2">Heart Rate (Line Chart)</h3>
-        <ResponsiveContainer width="100%" height="100%">
-          <LineChart data={data}>
-            <XAxis dataKey="time" />
-            <YAxis domain={[50, 130]} />
-            <Tooltip />
-            <Legend />
-            <Line type="monotone" dataKey="heartRate" stroke="#f43f5e" />
-          </LineChart>
-        </ResponsiveContainer>
-      </div>
+      <div className="grid grid-cols-2 gap-4">
+        {/* Heart Rate */}
+        <div className="bg-gray-900 rounded-lg p-4">
+          <div className="flex justify-between items-center mb-2">
+            <h3 className="text-sm text-gray-300">Heart Rate</h3>
+            <span className="bg-red-600 text-xs px-2 py-0.5 rounded-full">
+              {data.at(-1)?.heartRate ?? '--'} bpm
+            </span>
+          </div>
+          <ResponsiveContainer width="100%" height={120}>
+            <LineChart data={data}>
+              <XAxis dataKey="time" hide />
+              <YAxis domain={[50, 140]} hide />
+              <Tooltip />
+              <Line type="monotone" dataKey="heartRate" stroke="#f43f5e" strokeWidth={2} dot={false} />
+            </LineChart>
+          </ResponsiveContainer>
+        </div>
 
-      {/* Blood Pressure - Bar */}
-      <div className="h-56">
-        <h3 className="font-medium mb-2">Blood Pressure (Bar Chart)</h3>
-        <ResponsiveContainer width="100%" height="100%">
-          <BarChart data={data}>
-            <XAxis dataKey="time" />
-            <YAxis />
-            <Tooltip />
-            <Legend />
-            <Bar dataKey="systolic" fill="#3b82f6" />
-            <Bar dataKey="diastolic" fill="#6366f1" />
-          </BarChart>
-        </ResponsiveContainer>
-      </div>
+        {/* Blood Pressure */}
+        <div className="bg-gray-900 rounded-lg p-4">
+          <div className="flex justify-between items-center mb-2">
+            <h3 className="text-sm text-gray-300">Blood Pressure</h3>
+            <span className="bg-blue-600 text-xs px-2 py-0.5 rounded-full">
+              {data.at(-1)?.systolic ?? '--'}/{data.at(-1)?.diastolic ?? '--'} mmHg
+            </span>
+          </div>
+          <ResponsiveContainer width="100%" height={120}>
+            <BarChart data={data}>
+              <XAxis dataKey="time" hide />
+              <YAxis hide />
+              <Tooltip />
+              <Bar dataKey="systolic" fill="#3b82f6" />
+              <Bar dataKey="diastolic" fill="#6366f1" />
+            </BarChart>
+          </ResponsiveContainer>
+        </div>
 
-      {/* SpO₂ - Area */}
-      <div className="h-56">
-        <h3 className="font-medium mb-2">SpO₂ (Area Chart)</h3>
-        <ResponsiveContainer width="100%" height="100%">
-          <AreaChart data={data}>
-            <XAxis dataKey="time" />
-            <YAxis domain={[90, 100]} />
-            <Tooltip />
-            <Area type="monotone" dataKey="spo2" stroke="#10b981" fill="#d1fae5" />
-          </AreaChart>
-        </ResponsiveContainer>
-      </div>
+        {/* SpO₂ */}
+        <div className="bg-gray-900 rounded-lg p-4">
+          <div className="flex justify-between items-center mb-2">
+            <h3 className="text-sm text-gray-300">SpO₂</h3>
+            <span className="bg-green-600 text-xs px-2 py-0.5 rounded-full">
+              {data.at(-1)?.spo2 ?? '--'}%
+            </span>
+          </div>
+          <ResponsiveContainer width="100%" height={120}>
+            <AreaChart data={data}>
+              <XAxis dataKey="time" hide />
+              <YAxis domain={[90, 100]} hide />
+              <Tooltip />
+              <Area type="monotone" dataKey="spo2" stroke="#10b981" fill="#065f46" />
+            </AreaChart>
+          </ResponsiveContainer>
+        </div>
 
-      {/* Temperature - Pie */}
-      <div className="h-56">
-        <h3 className="font-medium mb-2">Temperature Status (Pie Chart)</h3>
-        <ResponsiveContainer width="100%" height="100%">
-          <PieChart>
-            <Pie
-              data={pieData}
-              dataKey="value"
-              nameKey="name"
-              cx="50%"
-              cy="50%"
-              outerRadius={80}
-              label
-            >
-              {pieData.map((entry, index) => (
-                <Cell key={`cell-${index}`} fill={COLORS[index]} />
-              ))}
-            </Pie>
-            <Tooltip />
-          </PieChart>
-        </ResponsiveContainer>
-        <p className="text-center mt-2 text-sm text-gray-600">
-          Latest temperature: {latestTemp.toFixed(1)}°F → {tempCategory}
-        </p>
+        {/* Temperature */}
+        <div className="bg-gray-900 rounded-lg p-4">
+          <div className="flex justify-between items-center mb-2">
+            <h3 className="text-sm text-gray-300">Temperature</h3>
+            <span className="bg-yellow-500 text-xs px-2 py-0.5 rounded-full">
+              {latestTemp.toFixed(1)}°F
+            </span>
+          </div>
+          <ResponsiveContainer width="100%" height={120}>
+            <PieChart>
+              <Pie
+                data={pieData}
+                dataKey="value"
+                nameKey="name"
+                cx="50%"
+                cy="50%"
+                outerRadius={40}
+                label
+              >
+                {pieData.map((entry, index) => (
+                  <Cell key={`cell-${index}`} fill={COLORS[index]} />
+                ))}
+              </Pie>
+              <Tooltip />
+            </PieChart>
+          </ResponsiveContainer>
+          <p className="text-center text-sm mt-1 text-gray-400">{tempCategory}</p>
+        </div>
       </div>
     </div>
   );

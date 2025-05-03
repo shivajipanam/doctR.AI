@@ -1,6 +1,25 @@
 import React, { useState } from 'react';
 
-export default function DoctorAssistantChat() {
+export default function DoctorAssistantChat({ patientNames }) {
+  const qaPairs = [
+    {
+      question: "Has Angela Gislason’s blood pressure been stable over the last 6 hours?",
+      answer: "Angela's systolic blood pressure has fluctuated between 132–148 mmHg in the last 6 hours, with a slight upward trend. Diastolic remained in the 82–88 mmHg range. Overall, there is mild instability, warranting observation but no immediate intervention."
+    },
+    {
+      question: "Are there any abnormal lab results in the last 24 hours for Angela?",
+      answer: "Yes. Her WBC count was elevated at 13,200 cells/mcL (normal: 4,500–11,000), indicating possible infection or inflammation. CRP is also high at 20 mg/L."
+    },
+    {
+      question: "Is Angela’s insurance currently valid, and what procedures are covered?",
+      answer: "Angela’s insurance is active under HealthSure Premium Plus. It covers hospitalization, diagnostics, and outpatient consultations. MRI scans are included with 10% co-pay. Coverage valid until Dec 31, 2025."
+    },
+    {
+      question: "Has there been any change in Angela's mental status documented today?",
+      answer: "Yes. Nursing notes indicate Angela was alert at 08:00 but became mildly disoriented around 13:30. A neurology consult was ordered at 14:00."
+    }
+  ];
+
   const [messages, setMessages] = useState([
     { text: "Hello Doctor, how can I assist you today?", sender: "bot" }
   ]);
@@ -13,29 +32,40 @@ export default function DoctorAssistantChat() {
     setMessages(newMessages);
     setInput("");
 
-    // Mock response (replace with backend later)
     setTimeout(() => {
-      setMessages(prev => [...prev, {
-        text: `I'm processing your query: "${input}"`,
-        sender: "bot"
-      }]);
-    }, 1000);
+      const mentionsAngela = input.toLowerCase().includes("angela");
+      const angelaExists = patientNames.includes("Angela G.");
+
+      if (mentionsAngela && !angelaExists) {
+        setMessages((prev) => [
+          ...prev,
+          { text: "No record found for Angela Gislason.", sender: "bot" }
+        ]);
+        return;
+      }
+
+      const match = qaPairs.find(pair =>
+        input.toLowerCase().includes(pair.question.toLowerCase().slice(0, 12))
+      );
+
+      setMessages((prev) => [
+        ...prev,
+        {
+          text: match ? match.answer : "I'm sorry, I couldn't find data for that query.",
+          sender: "bot"
+        }
+      ]);
+    }, 800);
   };
 
   return (
-    <div className="w-full max-w-2xl mx-auto mt-8 bg-white rounded-lg shadow-md flex flex-col">
-      <div className="bg-blue-600 text-white p-4 rounded-t-lg font-semibold text-lg">
-        Doctor Assistant
-      </div>
-
-      <div className="p-4 h-96 overflow-y-auto flex flex-col gap-3">
-        {messages.map((msg, index) => (
+    <div className="flex flex-col flex-1 bg-gray-900 border border-gray-700 rounded-lg p-4">
+      <div className="flex-1 overflow-y-auto space-y-2 mb-4">
+        {messages.map((msg, i) => (
           <div
-            key={index}
-            className={`max-w-[75%] px-4 py-2 rounded-2xl text-sm ${
-              msg.sender === 'user'
-                ? 'bg-blue-100 self-end'
-                : 'bg-gray-200 self-start'
+            key={i}
+            className={`max-w-[80%] px-4 py-2 text-sm rounded-lg ${
+              msg.sender === 'user' ? 'bg-blue-600 text-white self-end' : 'bg-gray-700 text-gray-200 self-start'
             }`}
           >
             {msg.text}
@@ -43,18 +73,18 @@ export default function DoctorAssistantChat() {
         ))}
       </div>
 
-      <div className="flex border-t border-gray-200">
+      <div className="flex">
         <input
           type="text"
-          className="flex-1 px-4 py-3 outline-none text-sm"
-          placeholder="Ask a question about a patient..."
+          className="flex-1 bg-gray-800 text-white border border-gray-600 px-3 py-2 rounded-l-md text-sm focus:outline-none"
+          placeholder="Ask the assistant..."
           value={input}
-          onChange={e => setInput(e.target.value)}
-          onKeyDown={e => e.key === 'Enter' && handleSend()}
+          onChange={(e) => setInput(e.target.value)}
+          onKeyDown={(e) => e.key === 'Enter' && handleSend()}
         />
         <button
           onClick={handleSend}
-          className="bg-blue-600 text-white px-6 text-sm font-medium hover:bg-blue-700 transition"
+          className="bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-r-md text-sm text-white"
         >
           Send
         </button>
